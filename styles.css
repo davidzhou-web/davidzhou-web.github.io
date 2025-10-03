@@ -1,0 +1,105 @@
+@font-face {
+    src: url("fonts/JetBrainsMono/fonts/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+    font-family: "JetBrainsMono";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3 {
+    color: #1D1C1A;
+    font-family: "JetBrainsMono";
+}
+
+.hacker-green {
+    color: #008f39;
+}
+
+.thumbnail {
+    width: 300px;
+    height: 300px;
+}
+
+#hacker-groups {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#hacker-groups h2 {
+    width: 100%;
+    margin-left: 20px;
+}
+
+#hacker-groups article {
+    max-width: 325px;
+    padding: 5px 20px 20px 20px;
+    margin: 10px 20px 20px 20px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#hacker-groups article:hover {
+    transform: translateY(-5px);
+}
+
+#hacker-groups article h3 {
+    font-size: 22px;
+}
+
+.about-group { 
+    text-align: justify;
+}
+
+.first-word {
+    border-left: 4px solid rgb(73, 69, 69);
+    padding-left: 5px;
+}
+
+#hacker-groups article p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Imagen estilo "thumbnail" */
+#hacker-groups article .thumbnail {
+    width: 100%;
+    margin-bottom: 0px;
+    border: 1px solid #8F8F88;
+    padding: 2px;
+    margin-left: -3px;
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.number-gray {
+    color: gray;
+}
+
+/* cursor con barra vertical parpadeante */
+.cursor {
+  display: inline-block;
+  color: currentColor;
+  margin-left: 0.1ch;
+  animation: blink 1s steps(2, start) infinite;
+  font-weight: bold;
+  font-family: monospace;
+  user-select: none;
+}
+
+.cursor::after {
+  content: '|';
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
