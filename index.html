@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HACKERS FAMOSOS</title>
-    <meta name="description" content="Estos son los grupos de hackers más sofisticados y peligrosos de la actualidad que todo el mundo debe vigilar.">
-    <meta name="keywords" content="hacker,hackers famosos,cracker,ciberataque,ransomware,apt,ciberactivismo,criptomonedas,ciberseguridad,hacker mask,grupos de hackers famosos,grupos de hackers peligrosos">
+    <title>HACKERS BUSCADOS</title>
+    <meta name="description" content="Estos son los hackers más peligrosos, soldados digitales infiltrados en sistemas y entrenados para atacar desde las sombras de Internet.">
+    <meta name="keywords" content="hacker,hackers famosos,hackers peligrosos,cracker,ciberataque,ransomware,ciberactivismo,criptomonedas,ciberseguridad,hacker mask,grupos de hackers,grupos de hackers famosos,grupos de hackers peligrosos">
     <meta content="copyright" content="CDMFP">
     <meta name="author" content="David Zhou">
     <meta name="language" content="spanish">
@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <h1 id="title">$ HACK<span class="hacker-green">3</span>RS FAMOSOS</h1>
+        <h1 id="title">$ HACK<span class="hacker-green">3</span>RS BUSCADOS</h1>
         <nav>
             <ol>
                 <li>
@@ -31,13 +31,13 @@
         </nav>
     </header>
     <main>
-
+        <blockquote id="famous-quote"></blockquote>
         <section id="hacker-groups">
             <h2>LOS GRUPOS DE HACKERS MÁS PELIGROSOS</h2>
             <article id="lazarus-group">
                 <h3><span class="number-gray">01</span><span class="tab">Lazarus</span></h3>
                 <img class="thumbnail" src="images/lazarus-thumbnail.webp" alt="Lazarus Thumbnail">
-                <p class="about-group"><span class="first-word">El</span> Grupo Lazarus es un actor vinculado al apartado militar de Corea del Norte. Tienen objetivos políticos y económicos para apoyar al régimen de los Kim, como su programa nuclear. En los últimos años se han centrado en el espacio de las criptomonedas, debido al anonimato y la dificultad de rastrear los activos robados.</p>
+                <p class="about-group"><span class="first-word">El</span> Grupo Lazarus es un actor vinculado al apartado militar de Corea del Norte. Tienen objetivos políticos y económicos para apoyar al régimen de los Kim, así como su programa nuclear. En los últimos años se han centrado en el espacio de las criptomonedas, debido al anonimato y la dificultad de rastrear los activos robados.</p>
                 <section>
                     <p>Región: Corea del Norte</p>
                     <p>Industría: </p>
@@ -48,7 +48,7 @@
             <article id="anonymous-group">
                 <h3><span class="number-gray">02</span><span class="tab">Anonymous</span></h3>
                 <img class="thumbnail" src="images/Anonymous-Thumbnail.png" alt="Anonymous Thumbnail">
-                <p class="about-group"><span class="first-word">El</span> grupo Anonymous es un colectivo descentralizado, sin un cabecilla o líder, son conocidos por sus protestas y hackeos contra gobiernos y corporaciones que consideran que incumplen los derechos humanos. Tienen como objetivo la lucha contra la censura y la libertad de información.</i></p>
+                <p class="about-group"><span class="first-word">El</span> grupo Anonymous es un colectivo descentralizado, sin un cabecilla o líder, son conocidos por sus protestas e intrusiones contra gobiernos y corporaciones que consideran que incumplen los derechos humanos. Tienen como objetivo la lucha contra la censura y la libertad de información.</i></p>
                 <section>
                     <p>Región: Global</p>
                     <p>Industría: </p>
@@ -68,9 +68,9 @@
             </article>
         </section>
 
+
         <section id="famous-hackers">
             <h2>LOS HACKERS MÁS FAMOSOS</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptatibus alias facere corrupti voluptas distinctio, inventore error consequatur pariatur hic fugiat! Nostrum doloribus laborum maxime obcaecati labore quo magnam nulla?</p>
         </section>
 
         <section id="famous-cyberattacks">
@@ -122,5 +122,13 @@
     <footer>
         <p>&copy; Para la Asignatura de Lenguajes de Marcas y Posicionamiento Web</p>
     </footer>
+    <script>
+        var citas = [];
+        citas.push("El eslabón más débil de la ciberseguridad es el ser humano.");
+        citas.push("Un ordenador seguro es un ordenador apagado.");
+        citas.push("Sólo hay dos tipos de empresas: las que han sido pirateadas y las que aún no saben que lo han sido.");
+        document.getElementById("famous-quote").innerHTML = '<img src="images/light-bulb.png" width="20px">' +  (citas[Math.floor(Math.random() * citas.length)]);
+
+    </script>
 </body>
 </html>

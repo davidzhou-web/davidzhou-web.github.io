@@ -103,3 +103,9 @@ h1, h2, h3 {
 @keyframes blink {
   50% { opacity: 0; }
 }
+
+#famous-quote {
+    background-color: #FFEE8C;
+    padding: 5px;
+    display: inline-block;
+}
