@@ -6,6 +6,8 @@
     font-display: swap;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -108,4 +110,5 @@ h1, h2, h3 {
     background-color: #FFEE8C;
     padding: 5px;
     display: inline-block;
+
 }
