@@ -1,0 +1,161 @@
+@font-face {
+    src: url("fonts/JetBrainsMono-Regular.ttf") format("truetype");
+    font-family: "JetBrainsMono";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: "JetBrainsMono";
+    color: #1D1C1A;
+}
+
+main {
+    width: 99%;
+    margin: 0 auto;
+}
+
+/* Common CSS classes */
+.hacker-green {
+    color: #008f39;
+}
+
+/* Main */
+.thumbnail {
+    width: 100%;
+    margin-bottom: 0px;
+    height: 300px;
+    border: 1px solid #8F8F88;
+    padding: 2px;
+    margin-left: -3px;
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.number-gray {
+    color: gray;
+}
+
+#famous-quote {
+    background-color: #FFEE8C;
+    padding: 5px;
+    display: inline-block;
+    margin-left: 0;
+}
+
+main section {
+    margin-bottom: 30px;
+}
+
+main section h2 {
+    margin-bottom: 0px;
+}
+
+main section article h3 {
+    font-size: 22px;
+}
+
+main section article p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#hacker-groups,
+#famous-hackers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#hacker-groups article,
+#famous-hackers article {
+    padding: 5px 20px 5px 20px;
+    cursor: pointer;
+}
+
+#hacker-groups h2,
+#famous-hackers h2 {
+    width: 100%;
+}
+
+#hacker-groups article {
+    max-width: 325px; 
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+
+#famous-hackers {
+    justify-content: space-between;
+}
+
+#famous-hackers article {
+    display: flex;
+    align-items: center;
+    width: 46%;
+    transition: transform 0.3s ease;
+    gap: 10px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+#famous-hackers article img {
+    width: 50%;
+    height: 90%;
+    border-radius: 3px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+#hacker-groups article:hover {
+    transform: translateY(-5px);
+}
+
+#famous-hackers article:hover {
+    transform: translateX(5px);
+}
+
+.about { 
+    text-align: justify;
+}
+
+#famous-cyberattacks article {
+    display: inline-block;
+}
+
+/* Footer */
+
+footer {
+    padding-bottom: 10px;
+}
+
+/* cursor con barra vertical parpadeante */
+.cursor {
+  display: inline-block;
+  color: currentColor;
+  margin-left: 0.1ch;
+  animation: blink 1s steps(2, start) infinite;
+  font-weight: bold;
+  font-family: monospace;
+  user-select: none;
+}
+
+.cursor::after {
+  content: '|';
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
