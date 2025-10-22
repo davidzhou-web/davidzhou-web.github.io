@@ -9,8 +9,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 90%;
+    font-family: "JetBrains Mono", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -20,7 +20,7 @@ h1, h2, h3 {
 }
 
 main {
-    width: 99%;
+    width: 98%;
     margin: 0 auto;
 }
 
@@ -48,11 +48,17 @@ main {
     color: gray;
 }
 
+.right-arrow {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
 #famous-quote {
     background-color: #FFEE8C;
     padding: 5px;
     display: inline-block;
-    margin-left: 0;
+    margin-left: 0; 
 }
 
 main section {
@@ -91,10 +97,16 @@ main section article p {
 }
 
 #hacker-groups article {
+    display: flex;
+    flex-wrap: wrap; 
     max-width: 325px; 
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+}
+
+#hacker-groups article div:last-child {
+    margin-top: auto;
 }
 
 
@@ -103,12 +115,22 @@ main section article p {
 }
 
 #famous-hackers article {
+    background-color: #1D1C1A;
+    color: white;
     display: flex;
     align-items: center;
     width: 46%;
     transition: transform 0.3s ease;
     gap: 10px;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#famous-hackers h3 {
+    color: inherit;
+}
+
+#famous-hackers article p {
+    color: #F2F2F2;
 }
 
 #famous-hackers article img {
@@ -127,12 +149,73 @@ main section article p {
     transform: translateX(5px);
 }
 
+#famous-cyberattacks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#famous-cyberattacks h2 {
+    width: 100%;
+}
+
 .about { 
     text-align: justify;
 }
 
 #famous-cyberattacks article {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 5px 10px 20px;
+    width: 33%;
+}
+
+#famous-cyberattacks article > div:last-child {
+    margin-top: auto;
+    width: 96%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+#famous-cyberattacks article:hover .right-arrow {
+    transform: translateX(5px);
+}
+
+#terms h2 {
+    width: 100%;
+}
+
+#terms {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#terms dl {
     display: inline-block;
+    margin-right: 15px;
+}
+
+#terms dt {
+    font-size: 14px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#terms dt:hover {
+    color: #8F8F88;
+    transform:scale(1.1);
+}
+
+#terms dd {
+    display: none;
 }
 
 /* Footer */
