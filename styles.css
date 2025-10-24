@@ -1,7 +1,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: "JetBrains Mono", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "JetBrains Mono", 'Segoe UI', sans-serif;
     width: 95%;
     margin: 0 auto;
 }
@@ -10,31 +10,23 @@ h1, h2, h3 {
     color: #1D1C1A;
 }
 
+p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 main {
     width: 98%;
     margin: 0 auto;
 }
 
 dfn {
-    border-bottom: 3px dotted #8F8F88;
+    text-decoration: underline;
 }
 
 /* Common CSS classes */
 .hacker-green {
     color: #008f39;
-}
-
-.med-bold {
-    font-weight: 800;
-}
-
-/* Main */
-.thumbnail {
-    width: 100%;
-    margin-bottom: 0px;
-    padding: 2px;
-    object-fit: contain;
-    margin-left: -3px;
 }
 
 .tab {
@@ -59,21 +51,9 @@ dfn {
     margin-left: 0; 
 }
 
-main section {
+/* Main */ 
+#home-main section {
     margin-bottom: 30px;
-}
-
-main section h2 {
-    margin-bottom: 0px;
-}
-
-main section article h3 {
-    font-size: 22px;
-}
-
-main section article p {
-    font-size: 14px;
-    line-height: 1.5;
 }
 
 #hacker-groups,
@@ -101,6 +81,11 @@ main section article p {
     overflow: hidden;
     box-shadow: 1px 5px 5px #8F8F88;
     transition: transform 0.3s ease;
+}
+
+#hacker-groups article img {
+    width: 100%; 
+    object-fit: contain;
 }
 
 #hacker-groups article div:last-child {
@@ -182,14 +167,16 @@ main section article p {
     transform: translateX(5px);
 }
 
-#terms h2 {
-    width: 100%;
-}
-
+/* Main -> #terms */
 #terms {
     display: flex;
     flex-wrap: wrap;
 }
+
+#terms h2 {
+    width: 100%;
+}
+
 
 #terms dl {
     display: inline-block;
@@ -217,27 +204,6 @@ main section article p {
 }
 
 /* Footer */
-
 footer {
     padding-bottom: 10px;
 }
-
-/* cursor con barra vertical parpadeante */
-.cursor {
-  display: inline-block;
-  color: currentColor;
-  margin-left: 0.1ch;
-  animation: blink 1s steps(2, start) infinite;
-  font-weight: bold;
-  font-family: monospace;
-  user-select: none;
-}
-
-.cursor::after {
-  content: '|';
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
