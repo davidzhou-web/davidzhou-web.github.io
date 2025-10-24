@@ -1,3 +1,14 @@
+/* ──────────────── Base ──────────────── */
+:root {
+  --bg: #fff;
+  --text: #1d1c1a;
+  --muted: #8f8f88;
+  --accent: #008f39;
+  --shadow: 0 5px 10px rgba(0,0,0,0.15);
+  --radius: 6px;
+  --transition: 0.3s ease;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -6,9 +17,9 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3 {
-    color: #1D1C1A;
-}
+h1, h2, h3 { color: var(--text); }
+.gray-number { color: var(--muted); }
+.green-hacker { color: var(--accent); }
 
 p {
     font-size: 14px;
@@ -22,28 +33,16 @@ main {
 
 dfn {
     text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
-/* Common CSS classes */
-.hacker-green {
-    color: #008f39;
-}
-
+/* ──────────────── Utilidades ──────────────── */
 .tab {
     display: inline-block;
     margin-left: 20px;
 }
 
-.number-gray {
-    color: gray;
-}
-
-.right-arrow {
-    width: 16px;
-    height: 16px;
-    transition: transform 0.3s ease;
-}
-
+/* ──────────────── Componentes ──────────────── */
 #famous-quote {
     background-color: #FFEE8C;
     padding: 5px;
@@ -51,123 +50,129 @@ dfn {
     margin-left: 0; 
 }
 
-/* Main */ 
-#home-main section {
-    margin-bottom: 30px;
+/* ──────────────── Secciones principales (Grid) ──────────────── */
+
+.main section {
+  margin-bottom: 30px;
 }
 
-#hacker-groups,
-#famous-hackers {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+/* ======== GRUPOS DE HACKERS ======== */
+.hacker-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
-#hacker-groups article,
-#famous-hackers article {
-    padding: 5px 20px 5px 20px;
-    cursor: pointer;
+.hacker-groups h2 {
+  grid-column: 1 / -1; /* H2 ocupa todo el ancho */
 }
 
-#hacker-groups h2,
-#famous-hackers h2 {
-    width: 100%;
+.hacker-groups article {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  box-shadow: 1px 5px 5px #8f8f88;
+  transition: transform 0.3s ease;
+  padding: 1rem;
+  border-radius: 6px;
+  cursor: pointer
 }
 
-#hacker-groups article {
-    display: flex;
-    flex-wrap: wrap; 
-    max-width: 325px; 
-    overflow: hidden;
-    box-shadow: 1px 5px 5px #8F8F88;
-    transition: transform 0.3s ease;
+.hacker-groups article img {
+  width: 100%;
+  object-fit: contain;
 }
 
-#hacker-groups article img {
-    width: 100%; 
-    object-fit: contain;
+.hacker-groups article:hover {
+  transform: translateY(-5px);
 }
 
-#hacker-groups article div:last-child {
-    margin-top: auto;
+/* ======== HACKERS FAMOSOS ======== */
+.famous-hackers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  align-items: start;
 }
 
-
-#famous-hackers {
-    justify-content: space-between;
+.famous-hackers h2 {
+  grid-column: 1 / -1;
 }
 
-#famous-hackers article {
-    background-color: #1D1C1A;
-    color: white;
-    display: flex;
-    align-items: center;
-    width: 46%;
-    transition: transform 0.3s ease;
-    gap: 10px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+.famous-hackers article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #1d1c1a;
+  color: white;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 6px;
+  overflow: hidden; 
 }
 
-#famous-hackers h3 {
+.famous-hackers article h3 {
     color: inherit;
 }
 
-#famous-hackers article p {
-    color: #F2F2F2;
+.hacker-summary {
+    padding: 0 1rem 0 1rem;
 }
 
-#famous-hackers article img {
-    width: 50%;
-    height: 90%;
-    border-radius: 3px;
-    object-fit: cover;
-    margin-left: 10px;
-}
-
-#hacker-groups article:hover {
-    transform: translateY(-5px);
-}
-
-#famous-hackers article:hover {
-    transform: translateX(5px);
-}
-
-#famous-cyberattacks {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-#famous-cyberattacks h2 {
-    width: 100%;
-}
-
-.about { 
-    text-align: justify;
-}
-
-#famous-cyberattacks article {
-    display: flex;
-    flex-wrap: wrap;
-    cursor: pointer;
-    box-shadow: 3px 1px 5px #8F8F88; 
-    padding: 10px 5px 10px 20px;
-    width: 33%;
-}
-
-#famous-cyberattacks article > div:last-child {
+.group-data {
+    border-top: 1px solid var(--muted);
     margin-top: auto;
-    width: 96%;
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
 }
 
-#famous-cyberattacks article:hover .right-arrow {
-    transform: translateX(5px);
+.famous-hackers article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Main -> #terms */
+.famous-hackers article:hover {
+  transform: translateX(5px);
+}
+
+/* ======== CIBERATAQUES FAMOSOS ======== */
+.famous-cyberattacks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.famous-cyberattacks h2 {
+  grid-column: 1 / -1;
+}
+
+.famous-cyberattacks article {
+  display: grid;
+  grid-template-rows: auto auto;
+  box-shadow: 3px 1px 5px #8f8f88;
+  padding: 15px 20px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.famous-cyberattacks article:hover {
+  transform: translateY(-4px);
+}
+
+/* Interior del artículo: fecha y flecha a la derecha */
+.famous-cyberattacks article > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.famous-cyberattacks article:hover .right-arrow {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+/* ======== TÉRMINOS ======== */
 #terms {
     display: flex;
     flex-wrap: wrap;
@@ -195,8 +200,8 @@ dfn {
 }
 
 #terms dt:hover {
-    color: #8F8F88;
-    transform:scale(1.1);
+  color: var(--muted);
+  transform: scale(1.05); 
 }
 
 #terms dd {
