@@ -15,18 +15,25 @@ main {
     margin: 0 auto;
 }
 
+dfn {
+    border-bottom: 3px dotted #8F8F88;
+}
+
 /* Common CSS classes */
 .hacker-green {
     color: #008f39;
+}
+
+.med-bold {
+    font-weight: 800;
 }
 
 /* Main */
 .thumbnail {
     width: 100%;
     margin-bottom: 0px;
-    height: 300px;
-    border: 1px solid #8F8F88;
     padding: 2px;
+    object-fit: contain;
     margin-left: -3px;
 }
 
@@ -92,7 +99,7 @@ main section article p {
     flex-wrap: wrap; 
     max-width: 325px; 
     overflow: hidden;
-    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 5px 5px #8F8F88;
     transition: transform 0.3s ease;
 }
 
@@ -158,7 +165,7 @@ main section article p {
     display: flex;
     flex-wrap: wrap;
     cursor: pointer;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 1px 5px #8F8F88; 
     padding: 10px 5px 10px 20px;
     width: 33%;
 }
