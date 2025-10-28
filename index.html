@@ -296,6 +296,24 @@
         citas.push("Los hackers solo necesitan tener suerte una vez.");
         citas.push("Las batallas ya no se libran solo en tierra, mar o aire, sino en la red.");
         document.getElementById("famous-quote").innerHTML = '<span>⚠️</span>' +  (citas[Math.floor(Math.random() * citas.length)]);
+
+        var terms = document.querySelectorAll("#terms dt");
+        
+        function hideDescriptions() {
+            for(var i=0; i<terms.length; i++) {
+                terms[i].parentElement.style.display="inline-block";
+                terms[i].nextElementSibling.style.display="none";
+            }
+        }
+
+        for(var i=0; i<terms.length; i++) {
+            terms[i].addEventListener("click", function(e) {
+                hideDescriptions();
+                e.target.parentElement.style.display="block";
+                e.target.nextElementSibling.style.display="block";
+            });
+        }
+
     </script>
 </body>
 
