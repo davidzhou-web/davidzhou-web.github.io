@@ -66,8 +66,9 @@ main {
 }
 
 dfn {
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  font-style: normal;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ──────────────── Menú Interactivo ──────────────── */
