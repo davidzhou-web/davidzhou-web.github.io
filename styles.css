@@ -51,6 +51,10 @@ a:hover {
   color: var(--accent);
 }
 
+.title a:hover {
+  color: white;
+}
+
 /* ──────────────── Colores para Texto ──────────────── */
 .gray-number { color: var(--muted); }
 .green-hacker { color: var(--accent); }
