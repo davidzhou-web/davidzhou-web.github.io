@@ -1,31 +1,61 @@
 /* ──────────────── Base ──────────────── */
 :root {
-  --bg: #fff;
-  --text: #1d1c1a;
+  --bg: #0e1621;
+  /* --text: #1d1c1a;*/
+  --text: #e5e7eb;
   --muted: #8f8f88;
-  --accent: #008f39;
-  --shadow: 0 5px 10px rgba(0,0,0,0.15);
+  --accent: #00ff99;
   --radius: 6px;
-  --transition: 0.3s ease;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: "JetBrains Mono", 'Segoe UI', sans-serif;
+    font-family: "Share Tech Mono";
     width: 95%;
     margin: 0 auto;
+    background-color: var(--bg);
+    color: var(--text);
 }
 
-h1, h2, h3 { color: var(--text); }
-.gray-number { color: var(--muted); }
-.green-hacker { color: var(--accent); }
+h2 {
+  color: #e2e8f0;
+  font-family: "Share Tech Mono";
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+h2::after {
+  content: "_";
+  margin-left: 5px;
+  animation: blink 1s infinite;
+  color: var(--accent);
+}
 
 p {
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease; 
+}
+
+a:visited {
+  color: var(--text);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* ──────────────── Colores para Texto ──────────────── */
+.gray-number { color: var(--muted); }
+.green-hacker { color: var(--accent); }
+
+/* ──────────────── Main General ──────────────── */
 main {
     width: 98%;
     margin: 0 auto;
@@ -36,26 +66,89 @@ dfn {
     text-underline-offset: 3px;
 }
 
-/* ──────────────── Utilidades ──────────────── */
-.tab {
-    display: inline-block;
-    margin-left: 20px;
+/* ──────────────── Menú Interactivo ──────────────── */
+/* ---- Ocultar Input ---- */
+.dropdown input {
+  display: none;
 }
 
-/* ──────────────── Componentes ──────────────── */
+.top-menu > a {
+  font-size: 1.2rem;
+}
+
+.arrow {
+  font-size: 0.8rem; 
+  transition: transform 0.3s ease;
+  color: var(--accent);
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* ---- Submenú oculto ---- */
+.submenu {
+  font-size: 1rem;
+  padding-left: 0.7rem;
+  border-left: 1px solid var(--accent);
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ---- Mostra submenú al hacer click ---- */
+.dropdown input:checked ~ .submenu {
+  display: block;
+  max-height: 200px;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+/* ---- Rotar flecha cuando está abierto ---- */
+.dropdown input:checked + label .arrow {
+  transform: rotate(180deg);
+}
+
+
+/* ──────────────── HEADER ──────────────── */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #famous-quote {
-    background-color: #FFEE8C;
-    padding: 5px;
-    display: inline-block;
-    margin-left: 0; 
+  margin-left: 0;
+  display: inline-block;
+  color: #00ff99;
+  font-family: "Share Tech Mono", monospace;
+  background: #0a0f0d;
+  border-left: 3px solid var(--accent);
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 8px rgba(0,255,153,0.2);
+}
+
+#famous-quote span {
+  margin-right: 6px;
+  position: relative;
+  top: -2px;
+}
+
+#famous-quote::after {
+  content: "|"; 
+  animation: blink 1s infinite;
+  color: var(--accent);
 }
 
 /* ──────────────── Secciones principales (Grid) ──────────────── */
-
 .main section {
   margin-bottom: 30px;
 }
 
+.tab {
+    display: inline-block;
+    margin-right: 10px;
+}
 /* ======== GRUPOS DE HACKERS ======== */
 .hacker-groups {
   display: grid;
@@ -67,15 +160,36 @@ dfn {
   grid-column: 1 / -1; /* H2 ocupa todo el ancho */
 }
 
+.hacker-groups h3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hacker-groups h3 p {
+  margin: 0;
+}
+
+.hacker-groups h3 .apt {
+  font-size: 0.8rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px black;
+  padding-right: 5px;
+  padding-left: 5px; 
+}
+
 .hacker-groups article {
   display: grid;
   grid-template-rows: auto 1fr;
   overflow: hidden;
-  box-shadow: 1px 5px 5px #8f8f88;
+  box-shadow: 2px 2px 3px var(--accent);
   transition: transform 0.3s ease;
   padding: 1rem;
-  border-radius: 6px;
-  cursor: pointer
+  border-radius: var(--radius);
+  cursor: pointer; 
+}
+
+.hacker-groups a {
+  text-decoration: underline;
 }
 
 .hacker-groups article img {
@@ -101,14 +215,15 @@ dfn {
 
 .famous-hackers article {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   background-color: #1d1c1a;
   color: white;
   align-items: center;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 3px 0px black;
   transition: transform 0.3s ease;
-  border-radius: 6px;
-  overflow: hidden; 
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .famous-hackers article h3 {
@@ -119,8 +234,7 @@ dfn {
     padding: 0 1rem 0 1rem;
 }
 
-.group-data {
-    border-top: 1px solid var(--muted);
+.group-data { 
     margin-top: auto;
 }
 
@@ -131,7 +245,7 @@ dfn {
 }
 
 .famous-hackers article:hover {
-  transform: translateX(5px);
+  transform: translateY(4px);
 }
 
 /* ======== CIBERATAQUES FAMOSOS ======== */
@@ -148,28 +262,19 @@ dfn {
 .famous-cyberattacks article {
   display: grid;
   grid-template-rows: auto auto;
-  box-shadow: 3px 1px 5px #8f8f88;
+  box-shadow: 2px 2px 3px var(--accent);
   padding: 15px 20px;
-  border-radius: 6px;
+  border-radius: var(--radius);
   transition: transform 0.3s ease;
-  cursor: pointer;
+  cursor: pointer; 
+}
+
+.famous-cyberattacks article > p {
+  margin-top: auto;
 }
 
 .famous-cyberattacks article:hover {
   transform: translateY(-4px);
-}
-
-/* Interior del artículo: fecha y flecha a la derecha */
-.famous-cyberattacks article > div:last-child {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
-}
-
-.famous-cyberattacks article:hover .right-arrow {
-  transform: translateX(5px);
-  transition: transform 0.3s ease;
 }
 
 /* ======== TÉRMINOS ======== */
@@ -191,17 +296,17 @@ dfn {
 #terms dt {
     font-size: 14px;
     padding: 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 3px 0px black;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
     font-weight: bold;
     display: inline-block;
 }
 
 #terms dt:hover {
-  color: var(--muted);
-  transform: scale(1.05); 
+  color: var(--accent); 
+  transform: translateY(2px);
 }
 
 #terms dd {
@@ -210,5 +315,28 @@ dfn {
 
 /* Footer */
 footer {
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 10px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (max-width: 1024px) {
+  .top-header {
+    flex-wrap: wrap;
+  }
+  .top-header h1 {
+    width: 100%;
+  }
+  footer {
+    flex-wrap: wrap; 
+  }
+
+  footer p:first-child {
+    margin-right: 100px;
+    margin-bottom: 0;
+  }
 }

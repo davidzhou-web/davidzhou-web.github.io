@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HACKERS BUSCADOS</title>
+    <title>Hackers</title>
     <meta name="description" content="Estos son los hackers más peligrosos, soldados digitales infiltrados en sistemas y entrenados para atacar desde las sombras de Internet.">
     <meta name="keywords" content="hacker,hackers famosos,hackers peligroso,grupos de hackers,grupos de hackers famosos,grupos de hackers peligrosos,ciberataque,ciberataques famosos,ransomware,ciberactivismo,criptomonedas,ciberseguridad">
-    <meta content="copyright" content="CDMFP">
+    <meta content="copyright" content="David Zhou">
     <meta name="author" content="David Zhou">
     <meta name="language" content="spanish">
+    <meta name="googlebot" content="index, follow">
     <link rel="icon" type="image/png" href="images/favicon-fsociety.png" sizes="50x50"/>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-    <meta name="robots" content="index,follow">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
+    <meta name="robots" content="index,follow">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hackers Buscados">
     <meta name="twitter:description" content="Descubre los hackers y grupos más peligrosos del mundo, sus ciberataques y secretos digitales.">
@@ -24,77 +28,167 @@
 <body>
     <header>
         <!-- <h1 id="title">$ HACK<span class="hacker-green">3</span>RS BUSCADOS</h1> -->
-         <h1 class="title">H<span class="green-hacker">4</span>CK<span class="green-hacker">3</span>RS</h1>
+        <div class="top-header">
+            <h1 class="title">H<span class="green-hacker">4</span>CK<span class="green-hacker">3</span>RS</h1>
+            <blockquote id="famous-quote"></blockquote>
+        </div>
         <nav>
             <ol>
-                <li>
-                    <a href="#hacker-groups">Grupos</a>
-                    <ul>
+                <li class="top-menu dropdown">
+                    <a href="#hacker-groups">Grupos</a> 
+                    <input type="checkbox" id="groups-toggle">
+                    <label for="groups-toggle">
+                        <span class="arrow">▼</span>
+                    </label>
+                    <ul class="submenu">
                         <li><a href="#lazarus-group">Lazarus</a></li>
                         <li><a href="#anonymous-group">Anonymous</a></li>
                         <li><a href="#muddywater-group">Muddywater</a></li>
                         <li><a href="#shinyhunters-group">ShinyHunters</a></li>
                     </ul>
                 </li>
-                <li><a href="#famous-hackers">Hackers Famosos</a></li>
-                <li><a href="#famous-cyberattacks">Ciberataques</a></li>
-                <li><a href="#terms">Términos</a></li>
+                <li class="top-menu dropdown">
+                    <a href="#famous-hackers">Hackers Famosos</a>
+                    <input type="checkbox" id="hackers-toggle">
+                    <label for="hackers-toggle">
+                        <span class="arrow">▼</span>
+                    </label>
+                    <ul class="submenu">
+                        <li><a href="#phineasfisher-hacker">Phineas Fisher</a></li>
+                    </ul>
+                </li>
+                <li class="top-menu dropdown">
+                    <a href="#famous-cyberattacks">Ciberataques</a>
+                    <input type="checkbox" id="cyberattacks-toggle">
+                    <label for="cyberattacks-toggle">
+                        <span class="arrow">▼</span>
+                    </label>
+                    <ul class="submenu">
+                        <li><a href="#stuxnet-cyberattack">Stuxnet</a></li>
+                        <li><a href="#wannacry-cyberattack">WannaCry</a></li>
+                    </ul>
+                </li>
+                <li class="top-menu"><a href="#terms">Términos</a></li> 
             </ol>
         </nav>
     </header>
     <main class="main">
-        <blockquote id="famous-quote"></blockquote>
         <section id="hacker-groups" class="hacker-groups">
-            <h2>LOS GRUPOS DE HACKERS MÁS PELIGROSOS</h2>
+            <h2>🔗 Los grupos de hackers más peligrosos</h2>
             <article id="lazarus-group">
                 <div>    
-                    <h3><span class="gray-number">01</span><span class="tab">Lazarus</span></h3>
+                    <h3>
+                        <p><span class="gray-number tab">01</span> Lazarus</p>
+                        <p class="apt">APT-38</p>
+                    </h3>
                     <img src="images/lazarus-thumbnail.png" alt="Imagen representativa del grupo Lazarus">
                     <p class="about">El grupo Lazarus es un actor vinculado al apartado militar de Corea del Norte. Tienen objetivos políticos y económicos para apoyar al régimen de los Kim, así como su programa nuclear. En los últimos años se han centrado en el espacio de las criptomonedas, debido al anonimato y la dificultad de rastrear los activos robados.</p>
                 </div>
                 <div class="group-data">
                     <p>Región: Corea del Norte</p>
-                    <p>Industría: </p>
                     <p>Primera Aparición: 2007</p>
                 </div>
             </article>
 
-            <article id="anonymous-group">
+             <article id="cozybear-group">
                 <div>    
-                    <h3><span class="gray-number">02</span><span class="tab">Anonymous</span></h3>
-                    <img class="thumbnail-group" src="images/anonymous-thumbnail.png" alt="Imagen representativa del grupo Anonymous">
-                    <p class="about-group">El grupo Anonymous es un colectivo descentralizado, sin un cabecilla o líder, son conocidos por sus protestas e intrusiones contra gobiernos y corporaciones que consideran que incumplen los derechos humanos. Tienen como objetivo la lucha contra la censura y la libertad de información.</i></p>
+                    <h3>
+                        <p><span class="gray-number tab">02</span> Cozy Bear</p>
+                        <p class="apt">APT-29</p>
+                    </h3>
+                    <img class="thumbnail-group" src="images/black-template.jpg " alt="Imagen representativa del grupo Cozy Bear">
+                    <p class="about-group">El grupo Cozy Bear es un actor financiado y vinculado al <abbr title="Servicio de Inteligencia Exterior Ruso">SRV</abbr> o <abbr title="Servicio Federal de Seguridad de la Federación de Rusia">FSB</abbr>. Su objetivo principal es lograr una presencia persistente en sistemas de interés estratégico para obtener inteligencia valiosa para Rusia. Es conocido por comprometer la cadena de suministro de SolarWinds, lo que le permitió infiltrarse en sistemas gubernamentales y de empresas privadas principalmente de los Estados Unidos.</p>
                 </div>
                 <div class="group-data">
-                    <p>Región: Global</p>
-                    <p>Industría: </p>
-                    <p>Primera Aparición: 2000</p>
+                    <p>Región: Rusia</p>
+                    <p>Primera Aparición: 2008</p>
+                </div>
+            </article>
+
+            <article id="doubledragon-group">
+                <div>    
+                    <h3>
+                        <p><span class="gray-number tab">03</span> Double Dragon</p>
+                        <p class="apt">APT-41</p>
+                    </h3>
+                    <img class="thumbnail-group" src="images/black-template.jpg " alt="Imagen representativa del grupo Double Dragon">
+                    <p class="about-group">El grupo Double Dragon es un actor con supuesto vínculo con el Ministerio de Seguridad del Estado de China. Tienen objetivos de espionaje y obtención de inteligencia que sea de interés estratégico para China, así como crimen financiero para obtener beneficios económicos.</p>
+                </div>
+                <div class="group-data">
+                    <p>Región: China</p>
+                    <p>Primera Aparición: 2012</p>
+                </div>
+            </article>
+
+            <article id="equationgroup-group">
+                <div>    
+                    <h3>
+                        <p><span class="gray-number tab">04</span> Equation Group</p>
+                        <p class="apt">APT-C-40</p>
+                    </h3>
+                    <img class="thumbnail-group" src="images/black-template.jpg" alt="Imagen representativa del grupo Equation Group">
+                    <p class="about-group">El grupo Equation Group se diferencia por su capacidad de ciberespionaje altamente sofisticado vinculado con la <abbr title="Agencia de Seguridad Nacional de Estados Unidos">NSA</abbr>. Sus objetivos principales son el espionaje estratégico y la obtención de inteligencia de alto valor, incluyendo secretos militares, tecnológicos y gubernamentales. Se especializan en operaciones encubiertas de largo plazo mediante malware avanzado, exploits de día cero y técnicas de sigilo extremo, actuando sobre objetivos de alto interés global.</p>
+                </div>
+                <div class="group-data">
+                    <p>Región: Estados Unidos</p>
+                    <p>Primera Aparición: 2001</p>
                 </div>
             </article>
 
             <article id="muddywater-group">
                 <div>    
-                    <h3><span class="gray-number">03</span><span class="tab">MuddyWater</span></h3>
+                    <h3>
+                        <p><span class="gray-number tab">05</span> MuddyWater</p>
+                        <p class="apt">APT</p>
+                    </h3>
                     <img class="thumbnail-group" src="images/muddywater-thumbnail.png " alt="Imagen representativa del grupo MuddyWater">
-                    <p class="about-group">El grupo MuddyWater, es conocido por ser un actor afiliado al Ministerio de Inteligencia de Irán. Tiene objetivos de espionaje contra países afiliados a la OTAN, a través de campañas de Spear Phishing.</i></p>
+                    <p class="about-group">El grupo MuddyWater es conocido por ser un actor afiliado al Ministerio de Inteligencia de Irán. Tienen objetivos de espionaje contra países afiliados a la OTAN, a través de campañas de Spear Phishing.</i></p>
                 </div>
                 <div class="group-data">
-                    <p>Región: Iraní</p>
-                    <p>Industría: </p>
+                    <p>Región: Irán</p>
                     <p>Primera Aparición: 2017</p>
+                </div>
+            </article>
+
+            <article id="anonymous-group">
+                <div>    
+                    <h3>
+                        <p><span class="gray-number tab">06</span> Anonymous</p>
+                    </h3>
+                    <img class="thumbnail-group" src="images/anonymous-thumbnail.png" alt="Imagen representativa del grupo Anonymous">
+                    <p class="about-group">El grupo Anonymous es un colectivo descentralizado, sin un cabecilla o líder, son conocidos por sus protestas e intrusiones contra gobiernos y corporaciones que consideran que incumplen los derechos humanos. Tienen como objetivo la lucha contra la censura y la libertad de información.</i></p>
+                </div>
+                <div class="group-data">
+                    <p>Región: Global</p>
+                    <p>Primera Aparición: 2000</p>
+                </div>
+            </article>
+
+            <article id="theshadowbrokers-group">
+                <div>    
+                    <h3>
+                        <p><span class="gray-number tab">07</span> The Shadow Brokers</p>
+                    </h3>
+                    <img class="thumbnail-group" src="images/black-template.jpg" alt="Imagen representativa del grupo The Shadow Brokers">
+                    <p class="about-group">El grupo <abbr title="The Shadow Brokers">TSB</abbr> saltó al punto de mira internacional tras publicar varias filtraciones que contenían herramientas de piratería, incluidas vulnerabilidades de día 0 del grupo <i><a href="#equationgroup-group">Equation Group</a></i>, en el que se encontraba EternalBlue, el exploit que provocó <i><a href="#wannacry-cyberattack">WannaCry</a></i>, conocido como el mayor ataque de Ramsomware del mundo hasta la fecha.</p>
+                </div>
+                <div class="group-data">
+                    <p>Región: Rusia <abbr title="No Verificada">N/V</abbr></p>
+                    <p>Primera Aparición: 2016</p>
                 </div>
             </article>
 
             <article id="shinyhunters-group">
                 <div>    
-                    <h3><span class="gray-number">04</span><span class="tab">ShinyHunters</span></h3>
+                    <h3>
+                        <p><span class="gray-number tab">08</span><span class="tab"> ShinyHunters</span></p>
+                    </h3>
                     <img class="thumbnail-group" src="images/shinyhunters-thumbnail.png " alt="Imagen representativa del grupo ShinyHunters">
-                    <p class="about-group">ShinyHunters es un grupo criminal dedicado al robo de datos de empresas, con el fin de extersionar a las compañías a cambio de criptomonedas. Se encuentra en el punto de mira de cuerpos de seguridad de todo el mundo por ser el creador y administrador del que fue el mayor foro de la DarkWeb dedicado a la venta y filtración de datos, conocido como BreachForums.
+                    <p class="about-group">ShinyHunters es un grupo criminal dedicado al robo de datos de empresas, con el fin de extersionar a las compañías a cambio de criptomonedas. Se encuentra en el punto de mira de cuerpos de seguridad de todo el mundo por ser el administrador del que fue el mayor foro de la DarkWeb dedicado a la venta y filtración de datos, conocido como BreachForums.
                     </p>
                 </div>
                 <div class="group-data">
                     <p>Región: Desconocida</p>
-                    <p>Industría: </p>
                     <p>Primera Aparición: 2020</p>
                 </div>
             </article>
@@ -102,7 +196,7 @@
 
 
         <section id="famous-hackers" class="famous-hackers">
-            <h2>LOS HACKERS MÁS FAMOSOS</h2>
+            <h2>🔗 Los hackers más famosos</h2>
             <article id="phineasfisher-hacker">
                 <div class="hacker-summary">
                     <h3><span class="gray-number">01</span> Phineas Fisher</h3>
@@ -110,7 +204,7 @@
                 </div>
                 <img src="images/phineas-fisher.webp" alt="Imagen representativa de Phineas Fisher">
             </article>
-            <article id="phineasfisher-hacker">
+            <article id="">
                 <div class="hacker-summary">
                     <h3><span class="gray-number">02</span> Phineas Fisher</h3>
                     <p>Hacktivista sin identificar, se autoproclama revolucionario anarquista. Es conocido por la intrusión a la empresa Italiana <i>Hacking Team</i>, como protesta a la venta de capacidades de intrusión y vigilacia digital para los gobiernos y corporaciones.</p>
@@ -120,31 +214,27 @@
         </section>
 
         <section id="famous-cyberattacks" class="famous-cyberattacks">
-            <h2>LOS CIBERATAQUES MÁS GRANDES DE LA HISTORIA</h2>
+            <h2>🔗 Los ciberataques más grandes de la historia</h2>
             <article id="stuxnet-cyberattack">
                 <div>
                     <h3>Stuxnet</h3>
                     <p>El primer gusano informático programado para atacar sistemas industriales, liberado para llegar hasta las centrales nucleares iraníes.</p>
                 </div>
-                <div>
-                    <p><dfn title="Fecha de Acontecimientos">2005-2010</dfn></p>
-                    <!-- <img class="right-arrow" src="images/arrow-angle-pointing-to-right.png" alt=""> -->
-                </div>
+
+                <p><dfn title="Fecha de Acontecimientos">2010</dfn></p>
+
             </article>
             <article id="wannacry-cyberattack">
                 <div>
                     <h3>WannaCry</h3>
-                    <p>Nunca combines una vulnerabilidad 0day robada a la NSA con las manos equivocadas: grupos de hackers rusos y norcoreanos. El resultado fue WannaCry, uno de los ransomware más devastadores de la historia, que paralizó empresas en todo el mundo… incluso hospitales.</p>
+                    <p>Nunca combines una vulnerabilidad 0day robada a la <abbr title="Agencia de Seguridad Nacional de los Estados Unidos">NSA</abbr> con las manos equivocadas: grupos de hackers rusos y norcoreanos. El resultado fue WannaCry, uno de los ransomware más devastadores de la historia, que paralizó empresas en todo el mundo… incluyendo hospitales.</p>
                 </div>
-                <div>
-                    <p><dfn title="Fecha de Acontecimientos">2017</dfn></p>
-                    <!-- <img class="right-arrow" src="images/arrow-angle-pointing-to-right.png" alt=""> -->
-                </div>
+                <p><dfn title="Fecha de Acontecimientos">2017</dfn></p>
             </article>
         </section>
 
         <section id="terms" class="terms">
-            <h2>TÉRMINOS</h2>
+            <h2>🔗 TÉRMINOS</h2>
             <article>
                 <dl>
                     <dt>Hacker</dt>
@@ -182,14 +272,21 @@
                     <dt>Ingeniería Social</dt>
                     <dd>El arte de manipular la confianza humana para abrir puertas digitales, donde el atacante usa palabras, gestos y situaciones para hacer que la víctima entregue la llave sin darse cuenta.</dd>
                 </dl>
+                <dl>
+                    <dt>Supply-Chain Attack</dt>
+                    <dd>Ciberataque que se dirige a un eslabón débil de la cadena de suministro de una empresa. El atacante no ataca directamente a la organización objetivo, sino a través de la confianza que esta tiene con sus socios comerciales para distribuir malware, robar datos confidenciales o tomar el control de sistemas.</dd>
+                </dl>
             </article>
         </section>
         <section>
-            <a href="https://x.com/intent/post?url=https://davidzhou-web.github.io/" rel="_blank"><img src="images/twitter.png" alt="Comparte en X" title="Comparte este contenido en X" width="20"></a>
+            <p>Compartir en: </p>
+            <a href="https://x.com/intent/post?url=https://davidzhou-web.github.io/" target="_blank"><img src="images/twitter.png" alt="Comparte en X" title="Comparte este contenido en X" width="20"></a>
+            <a href="https://reddit.com/submit?url=https://davidzhou-web.github.io/" target="_blank"><img src="images/reddit.png" alt="Comparte en Reddit" title="Comparte este contenido en Reddit" width="20"></a>
         </section>
     </main>
     <footer>
-        <p>&copy; Para la Asignatura de Lenguajes de Marcas y Posicionamiento Web</p>
+        <p>&copy; Para la asignatura de <i>Posicionamiento y Optimización Web</i>.</p>
+        <p>✒️ Autor: David Zhou</p>
     </footer>
     <script>
         var citas = [];
@@ -198,8 +295,9 @@
         citas.push("Sólo hay dos tipos de empresas: las que han sido pirateadas y las que aún no saben que lo han sido.");
         citas.push("En la era digital, los datos son el nuevo petróleo.");
         citas.push("Internet es la escena del crimen del siglo XXI.");
-        citas.push("Los hackers solo necesitan tener suerte una vez. Vosotros necesitáis tener suerte siempre.");
-        document.getElementById("famous-quote").innerHTML = '<img src="images/light-bulb.png" width="20px" alt="Bombilla de decoración">' +  (citas[Math.floor(Math.random() * citas.length)]);
+        citas.push("Los hackers solo necesitan tener suerte una vez.");
+        citas.push("Las batallas ya no se libran solo en tierra, mar o aire, sino en la red.");
+        document.getElementById("famous-quote").innerHTML = '<span>⚠️</span>' +  (citas[Math.floor(Math.random() * citas.length)]);
     </script>
 </body>
 
