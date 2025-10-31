@@ -43,6 +43,10 @@ a {
   transition: color 0.2s ease; 
 }
 
+a:active {
+  opacity: 0.9;
+}
+
 a:visited {
   color: var(--text);
 }
@@ -55,14 +59,32 @@ a:hover {
   color: white;
 }
 
+.accent-color  {
+  color: var(--accent);
+}
+
 /* ──────────────── Colores para Texto ──────────────── */
-.gray-number { color: var(--muted); }
-.green-hacker { color: var(--accent); }
+.muted-color { color: var(--muted); }
 
 /* ──────────────── Main General ──────────────── */
-main {
+.main {
     width: 98%;
     margin: 0 auto;
+}
+
+.main section article:target { 
+  /*box-shadow: 0px 1px 3px  var(--accent);*/
+  box-shadow: 2px 3px 0px var(--accent);
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.main section:target h2 .mark {
+  color: var(--accent);
+}
+
+.main section article:hover h3 {
+  color: var(--accent);
 }
 
 dfn {
@@ -124,7 +146,7 @@ dfn {
 #famous-quote {
   margin-left: 0;
   display: inline-block;
-  color: #00ff99;
+  color: var(--accent);
   font-family: "Share Tech Mono", monospace;
   background: #0a0f0d;
   border-left: 3px solid var(--accent);
@@ -186,14 +208,16 @@ dfn {
   display: grid;
   grid-template-rows: auto 1fr;
   overflow: hidden;
-  box-shadow: 2px 2px 3px var(--accent);
+  /*box-shadow: 2px 2px 3px none;*/
+  box-shadow: 2px 3px 0px black;
   transition: transform 0.3s ease;
   padding: 1rem;
   border-radius: var(--radius);
   cursor: pointer; 
 }
 
-.hacker-groups a {
+.hacker-groups a,
+.famous-cyberattacks a {
   text-decoration: underline;
 }
 
@@ -209,7 +233,7 @@ dfn {
 /* ======== HACKERS FAMOSOS ======== */
 .famous-hackers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
   align-items: start;
 }
@@ -267,7 +291,8 @@ dfn {
 .famous-cyberattacks article {
   display: grid;
   grid-template-rows: auto auto;
-  box-shadow: 2px 2px 3px var(--accent);
+  /*box-shadow: 2px 2px 3px none;*/
+  box-shadow: 2px 3px 0px black;
   padding: 15px 20px;
   border-radius: var(--radius);
   transition: transform 0.3s ease;
@@ -276,6 +301,7 @@ dfn {
 
 .famous-cyberattacks article > p {
   margin-top: auto;
+  text-align: right;
 }
 
 .famous-cyberattacks article:hover {
@@ -310,7 +336,7 @@ dfn {
 }
 
 #terms dt:hover {
-  color: var(--accent); 
+  opacity: 0.8;
   transform: translateY(2px);
 }
 
