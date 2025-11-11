@@ -1,0 +1,399 @@
+/* ──────────────── Base ──────────────── */
+:root {
+  --bg: #0e1621;
+  /* --text: #1d1c1a;*/
+  --text: #e5e7eb;
+  --muted: #8f8f88;
+  --accent: #00ff99;
+  --radius: 6px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: "Share Tech Mono";
+    width: 95%;
+    margin: 0 auto;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+h2 {
+  color: #e2e8f0;
+  font-family: "Share Tech Mono";
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+h2::after {
+  content: "_";
+  margin-left: 5px;
+  animation: blink 1s infinite;
+  color: var(--accent);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+p > a {
+  font-style: italic;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease; 
+}
+
+a:active {
+  opacity: 0.9;
+}
+
+a:visited {
+  color: var(--text);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.title a:hover {
+  color: white;
+}
+
+.accent-color  {
+  color: var(--accent);
+}
+
+.op-right {
+  object-position: right;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* ──────────────── Colores para Texto ──────────────── */
+.muted-color { color: var(--muted); }
+
+/* ──────────────── Main General ──────────────── */
+.main {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.main > section article:target { 
+  /*box-shadow: 0px 1px 3px  var(--accent);*/
+  box-shadow: 2px 3px 0px var(--accent);
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.main > section:target h2 .mark {
+  color: var(--accent);
+}
+
+.main > section article:hover h3 {
+  color: var(--accent);
+}
+
+dfn {
+  font-style: normal;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ──────────────── Menú Interactivo ──────────────── */
+/* ---- Ocultar Input ---- */
+.dropdown input {
+  display: none;
+}
+
+.top-menu > a {
+  font-size: 1.2rem;
+}
+
+.arrow {
+  font-size: 0.8rem; 
+  transition: transform 0.3s ease;
+  color: var(--accent);
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* ---- Submenú oculto ---- */
+.submenu {
+  font-size: 1rem;
+  padding-left: 0.7rem;
+  border-left: 1px solid var(--accent);
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ---- Mostra submenú al hacer click ---- */
+.dropdown input:checked ~ .submenu {
+  display: block;
+  max-height: 200px;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+/* ---- Rotar flecha cuando está abierto ---- */
+.dropdown input:checked + label .arrow {
+  transform: rotate(180deg);
+}
+
+
+/* ──────────────── HEADER ──────────────── */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#famous-quote {
+  margin-left: 0;
+  display: inline-block;
+  color: var(--accent);
+  font-family: "Share Tech Mono", monospace;
+  background: #0a0f0d;
+  border-left: 3px solid var(--accent);
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 8px rgba(0,255,153,0.2);
+}
+
+#famous-quote span {
+  margin-right: 6px;
+  position: relative;
+  top: -2px;
+}
+
+#famous-quote::after {
+  content: "|"; 
+  animation: blink 1s infinite;
+  color: var(--accent);
+}
+
+/* ──────────────── Secciones principales (Grid) ──────────────── */
+.main section {
+  margin-bottom: 30px;
+}
+
+.tab {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.hacker-groups a,
+.famous-hackers a,
+.famous-cyberattacks a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+/* ======== GRUPOS DE HACKERS ======== */
+.hacker-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.hacker-groups h2 {
+  grid-column: 1 / -1; /* H2 ocupa todo el ancho */
+}
+
+.hacker-groups h3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hacker-groups h3 p {
+  margin: 0;
+}
+
+.hacker-groups h3 .apt {
+  font-size: 0.8rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px black;
+  padding-right: 5px;
+  padding-left: 5px; 
+}
+
+.hacker-groups article {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  /*box-shadow: 2px 2px 3px none;*/
+  box-shadow: 2px 3px 0px black;
+  transition: transform 0.3s ease;
+  padding: 1rem;
+  border-radius: var(--radius);
+  cursor: pointer; 
+}
+
+.hacker-groups article img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hacker-groups article:hover {
+  transform: translateY(-5px);
+}
+
+/* ======== HACKERS FAMOSOS ======== */
+.famous-hackers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.famous-hackers h2 {
+  grid-column: 1 / -1;
+}
+
+.famous-hackers article {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #1d1c1a;
+  color: white;
+  box-shadow: 2px 3px 0px black;
+  transition: transform 0.3s ease;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+}
+
+.famous-hackers article h3 {
+    color: inherit;
+}
+
+.hacker-summary {
+    padding: 0 1rem 0 1rem;
+}
+
+.group-data { 
+    margin-top: auto;
+}
+
+.famous-hackers article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.famous-hackers article:hover {
+  transform: translateY(4px);
+}
+
+/* ======== CIBERATAQUES FAMOSOS ======== */
+.famous-cyberattacks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.famous-cyberattacks h2 {
+  grid-column: 1 / -1;
+}
+
+.famous-cyberattacks article {
+  display: grid;
+  grid-template-rows: auto auto;
+  /*box-shadow: 2px 2px 3px none;*/
+  box-shadow: 2px 3px 0px black;
+  padding: 15px 20px;
+  border-radius: var(--radius);
+  transition: transform 0.3s ease;
+  cursor: pointer; 
+}
+
+.famous-cyberattacks article > p {
+  margin-top: auto;
+  text-align: right;
+}
+
+.famous-cyberattacks article:hover {
+  transform: translateY(-4px);
+}
+
+/* ======== TÉRMINOS ======== */
+#terms {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#terms h2 {
+    width: 100%;
+}
+
+#terms dl {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#terms dt {
+    font-size: 14px;
+    padding: 10px;
+    box-shadow: 2px 3px 0px black;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#terms dt:hover {
+  opacity: 0.8;
+  transform: translateY(2px);
+}
+
+#terms dd {
+    display: none;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;  
+  color: white;
+  transition: opacity 0.3s ease; 
+}
+
+.to-top:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (max-width: 1024px) {
+  .top-header {
+    flex-wrap: wrap;
+  }
+  .top-header h1 {
+    width: 100%;
+  }
+  footer {
+    flex-wrap: wrap; 
+  }
+
+  footer p:first-child {
+    margin-right: 100px;
+    margin-bottom: 0;
+  }
+}
