@@ -72,12 +72,12 @@
                     </ul>
                 </li>
                 <li class="top-menu"><a href="index.html#terms">Términos</a></li> 
-                <li class="top-menu"><a href="#">Enlaces</a></li> 
+                <li class="top-menu"><a href="#links">Enlaces</a></li> 
             </ol>
         </nav>
     </header>
     <main class="main">
-        <section id="links-of-interest">
+        <section id="links">
             <h2><span class="mark">Enlaces</span> de Interés</h2>
             <p>Enlaces a páginas web de compañeros de la asignatura de Posicionamiento y Optimización Web.</p>
             <article>
@@ -95,9 +95,34 @@
             </article>
         </section>
     </main>
-    <footer>
-        <p>&copy; Para la asignatura de <i>Posicionamiento y Optimización Web</i>.</p>
-        <p>✒️ Autor: David Zhou</p>
+    <footer id="footer">
+            <p>&copy; Para la asignatura de <i>Posicionamiento y Optimización Web</i>.</p>
+            <p>✒️ Autor: David Zhou</p>
     </footer>
+
+    <script>
+        function changeFooterPos() {
+            var footer = document.getElementById("footer");
+
+            var bodyHeight = document.body.scrollHeight;
+            var windowHeight = window.innerHeight;
+
+            console.log(windowHeight)
+            console.log(bodyHeight + footer.offsetHeight)
+
+            if (bodyHeight + footer.offsetHeight <= windowHeight) {
+                footer.classList.add("absolute-footer");
+            } else {
+                footer.classList.remove("absolute-footer");
+            }
+        }
+
+        window.addEventListener("resize", (event) => {
+            changeFooterPos();
+        });
+
+        changeFooterPos();
+
+    </script>
 </body>
 </html>

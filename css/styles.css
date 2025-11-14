@@ -59,6 +59,9 @@ a:hover {
   color: var(--accent);
 }
 
+.title {
+}
+
 .title a:hover {
   color: white;
 }
@@ -159,7 +162,6 @@ dfn {
   margin-left: 0;
   display: inline-block;
   color: var(--accent);
-  font-family: "Share Tech Mono", monospace;
   background: #0a0f0d;
   border-left: 3px solid var(--accent);
   padding: 8px 12px;
@@ -369,12 +371,18 @@ dfn {
 }
 
 
-
 /* Footer */
 footer {
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
+}
+
+
+.absolute-footer {
+  width: 95%;
+  position: absolute;
+  bottom: 0; 
 }
 
 @keyframes blink {

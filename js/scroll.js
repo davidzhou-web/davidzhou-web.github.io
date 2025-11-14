@@ -2,7 +2,7 @@ var lastKnownScrollPosition = 0;
 var ticking = false;
 var arrow = document.getElementById("arrow");
 
-function doSomething(scrollPos) {
+function showOrHideUpArrow(scrollPos) {
 
     if(scrollPos < 100 || (window.innerHeight + scrollPos) >= document.body.offsetHeight) {
         arrow.classList.add("hidden");
@@ -18,7 +18,7 @@ document.addEventListener("scroll", (event) => {
   if (!ticking) {
     // Throttle the event to "do something" every 20ms
     setTimeout(() => {
-      doSomething(lastKnownScrollPosition);
+      showOrHideUpArrow(lastKnownScrollPosition);
       ticking = false;
     }, 20);
 

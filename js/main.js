@@ -16,16 +16,16 @@ function addTerms() {
     var article = document.createElement("article");
 
     var terms = {
-        "Hacker": "",
-        "APT": "",
-        "Ransomware": "",
-        "Exploit": "",
-        "0day": "",
-        "Criptomoneda": "",
-        "Malware": "",
-        "Gusano": "",
-        "Ingeniería Social": "",
-        "Supply-Chain Attack": "Ciberataque que se dirige a un eslabón débil de la cadena de suministro de una empresa. El atacante no ataca directamente a la organización objetivo, sino a través de la confianza que esta tiene con sus socios comerciales para distribuir malware, robar datos confidenciales o tomar el control de sistemas."
+        "Hacker": "Persona con conocimientos avanzados en informática, dedicado a encontrar vulnerabilidades, rompiendo los límites de la programación en sistemas informáticos para acceder a ellos.",
+        "APT": "Grupo de hackers que amenaza de forma prolongada y sigilosa a un objetivo con el fin de robar datos o espiar. Suelen estar vinculados con gobiernos debido a los recursos casi ilimitados que poseen.",
+        "Ransomware": "Software malicioso que encripta los datos de los sistemas, con el fin de extorsionar a una empresa o individuo a pagar una suma de dinero a cambio de descifrar los datos.",
+        "Exploit": "Programa diseñado para aprovechar una vulnerabilidad en un sistema informático para causar un comportamiento no deseado, como obtener acceso al sistema o extraer información sensible.",
+        "0day": "Vulnerabilidad en un software o sistema que es desconocida por el fabricante y para la cuál no existe un parche disponible, los desarolladores han tenido 0 días para corregir el problema.",
+        "Criptomoneda": "Divisa digital, descentralizada que no están controladas por ningun banco central y no requiere de intermediarios ni identificación personal lo que lo convierte en un sistema que mejora la privacidad y el anonimato.",
+        "Malware": "Software malicioso diseñado para dañar, interrumpir u obtener acceso no autorizado a sistemas informátios.",
+        "Gusano": "Software malicioso diseñado para autoreplicarse y propagarse de forma independiente a través de la red, explotando vulnerabilidades de seguridad.",
+        "Ingeniería Social": "Técnicas de manipulación psicológica que los hackers utilizan para obtener información confidencial u acceso a sistemas explotando el factor humano, como la confianza.",
+        "Supply-Chain Attack": "Ciberataque que se dirige a un eslabón débil de la cadena de suministro de una empresa. El atacante no ataca directamente a la organización objetivo, sino a través de la confianza que esta tiene con sus socios comerciales para distribuir malware, robar datos confidenciales o tomar el control de sus sistemas."
     }
 
     for (const [key, value] of Object.entries(terms)) {
