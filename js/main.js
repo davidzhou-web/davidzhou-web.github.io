@@ -21,7 +21,7 @@ function addTerms() {
         "Ransomware": "Software malicioso que encripta los datos de los sistemas, con el fin de extorsionar a una empresa o individuo a pagar una suma de dinero a cambio de descifrar los datos.",
         "Exploit": "Programa diseñado para aprovechar una vulnerabilidad en un sistema informático para causar un comportamiento no deseado, como obtener acceso al sistema o extraer información sensible.",
         "0day": "Vulnerabilidad en un software o sistema que es desconocida por el fabricante y para la cuál no existe un parche disponible, los desarolladores han tenido 0 días para corregir el problema.",
-        "Criptomoneda": "Divisa digital, descentralizada que no están controladas por ningun banco central y no requiere de intermediarios ni identificación personal lo que lo convierte en un sistema que mejora la privacidad y el anonimato.",
+        "Criptomonedas": "Divisas digitales que no están controladas por un banco central, no requiere de intermediarios ni identificación personal mejorando así la privacidad y el anonimato.",
         "Malware": "Software malicioso diseñado para dañar, interrumpir u obtener acceso no autorizado a sistemas informátios.",
         "Gusano": "Software malicioso diseñado para autoreplicarse y propagarse de forma independiente a través de la red, explotando vulnerabilidades de seguridad.",
         "Ingeniería Social": "Técnicas de manipulación psicológica que los hackers utilizan para obtener información confidencial u acceso a sistemas explotando el factor humano, como la confianza.",
