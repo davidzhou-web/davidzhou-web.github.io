@@ -114,8 +114,9 @@ dfn {
   display: none;
 }
 
-.top-menu > a {
-  font-size: 1.2rem;
+.top-menu {
+  font-size: 1.4rem;
+  margin-bottom: 3px;
 }
 
 .arrow {
@@ -128,7 +129,8 @@ dfn {
 
 /* ---- Submenú oculto ---- */
 .submenu {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 3px;
   padding-left: 0.7rem;
   border-left: 1px solid var(--accent);
   list-style: none;
