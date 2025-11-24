@@ -32,6 +32,12 @@ h2::after {
   color: var(--accent);
 }
 
+dfn {
+  font-style: normal;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 p {
     font-size: 1rem;
     line-height: 1.5;
@@ -59,9 +65,6 @@ a:hover {
   color: var(--accent);
 }
 
-.title {
-}
-
 .title a:hover {
   color: white;
 }
@@ -78,82 +81,21 @@ a:hover {
   visibility: hidden;
 }
 
-/* ──────────────── Colores para Texto ──────────────── */
 .muted-color { color: var(--muted); }
 
-/* ──────────────── Main General ──────────────── */
-.main {
-    width: 98%;
-    margin: 0 auto;
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;  
+  color: white;
+  transition: opacity 0.3s ease; 
 }
 
-.main > section article:target { 
-  /*box-shadow: 0px 1px 3px  var(--accent);*/
-  box-shadow: 2px 3px 0px var(--accent);
-  border-top: 1px solid black;
-  border-left: 1px solid black;
+.to-top:hover {
+  opacity: 0.8;
 }
 
-.main > section:target h2 .mark {
-  color: var(--accent);
-}
-
-.main > section article:hover h3 {
-  color: var(--accent);
-}
-
-dfn {
-  font-style: normal;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* ──────────────── Menú Interactivo ──────────────── */
-/* ---- Ocultar Input ---- */
-.dropdown input {
-  display: none;
-}
-
-.top-menu {
-  font-size: 1.4rem;
-  margin-bottom: 3px;
-}
-
-.arrow {
-  font-size: 0.8rem; 
-  transition: transform 0.3s ease;
-  color: var(--accent);
-  cursor: pointer;
-  display: inline-block;
-}
-
-/* ---- Submenú oculto ---- */
-.submenu {
-  font-size: 1.2rem;
-  margin-bottom: 3px;
-  padding-left: 0.7rem;
-  border-left: 1px solid var(--accent);
-  list-style: none;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-/* ---- Mostra submenú al hacer click ---- */
-.dropdown input:checked ~ .submenu {
-  display: block;
-  max-height: 200px;
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
-}
-
-/* ---- Rotar flecha cuando está abierto ---- */
-.dropdown input:checked + label .arrow {
-  transform: rotate(180deg);
-}
-
-
-/* ──────────────── HEADER ──────────────── */
+/* ─────────────── Header ─────────────── */
 .top-header {
   display: flex;
   justify-content: space-between;
@@ -183,7 +125,56 @@ dfn {
   color: var(--accent);
 }
 
-/* ──────────────── Secciones principales (Grid) ──────────────── */
+/* ──────────────── Menú ──────────────── */
+/* Ocultar Input */
+.dropdown input {
+  display: none;
+}
+
+.top-menu {
+  font-size: 1.4rem;
+  margin-bottom: 3px;
+}
+
+.arrow {
+  font-size: 0.8rem; 
+  transition: transform 0.3s ease;
+  color: var(--accent);
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Ocultar submenú */
+.submenu {
+  font-size: 1.2rem;
+  margin-bottom: 3px;
+  padding-left: 0.7rem;
+  border-left: 1px solid var(--accent);
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Mostra submenú al hacer click */
+.dropdown input:checked ~ .submenu {
+  display: block;
+  max-height: 200px;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Rotar flecha cuando está abierto */
+.dropdown input:checked + label .arrow {
+  transform: rotate(180deg);
+}
+
+/* ──────────────── Main ──────────────── */
+.main {
+    width: 98%;
+    margin: 0 auto;
+}
+
 .main section {
   margin-bottom: 30px;
 }
@@ -193,13 +184,29 @@ dfn {
     margin-right: 10px;
 }
 
+.main > section article:target { 
+  /*box-shadow: 0px 1px 3px  var(--accent);*/
+  box-shadow: 2px 3px 0px var(--accent);
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.main > section:target h2 .mark {
+  color: var(--accent);
+}
+
+.main > section article:hover h3 {
+  color: var(--accent);
+}
+
 .hacker-groups a,
 .famous-hackers a,
 .famous-cyberattacks a {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-/* ======== GRUPOS DE HACKERS ======== */
+
+/* Grupos de Hackers */
 .hacker-groups {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -248,7 +255,7 @@ dfn {
   transform: translateY(-5px);
 }
 
-/* ======== HACKERS FAMOSOS ======== */
+/* Hackers famosos */
 .famous-hackers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -294,7 +301,7 @@ dfn {
   transform: translateY(4px);
 }
 
-/* ======== CIBERATAQUES FAMOSOS ======== */
+/* Ciberataques famosos */
 .famous-cyberattacks {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -325,7 +332,7 @@ dfn {
   transform: translateY(-4px);
 }
 
-/* ======== TÉRMINOS ======== */
+/* Términos */
 #terms {
     display: flex;
     flex-wrap: wrap;
@@ -360,26 +367,40 @@ dfn {
     display: none;
 }
 
-.to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;  
-  color: white;
-  transition: opacity 0.3s ease; 
-}
-
-.to-top:hover {
-  opacity: 0.8;
-}
-
-
-/* Footer */
-footer {
+/* ─────────────── Footer ─────────────── */
+.footer {
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
 }
 
+/* ────────────── Links ────────────── */
+
+#links li {
+  list-style-type: none;
+}
+
+#links ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#links img {
+  width: 100%;
+}
+
+#links a {
+  margin-top: auto;
+}
+
+#links figcaption {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
 
 .absolute-footer {
   width: 95%;
@@ -387,6 +408,7 @@ footer {
   bottom: 0; 
 }
 
+/* ──────────── Parpadeo ──────────── */
 @keyframes blink {
   50% { opacity: 0; }
 }
