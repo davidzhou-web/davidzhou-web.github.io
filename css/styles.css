@@ -457,6 +457,10 @@ pre {
     line-height: 1.45;
     white-space: pre;           /* mantiene formato original */
 }
+
+.breadcrum p {
+  display: inline;
+}
  
 /* ──────────── Parpadeo ──────────── */
 @keyframes blink {
