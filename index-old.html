@@ -26,7 +26,7 @@
     <header>
         <div class="top-header">
             <h1 class="title"><a href="#">H<span class="accent-color">4</span>CK<span class="accent-color">3</span>RS</a></h1>
-            <blockquote id="famous-quote" aria-live="polite"></blockquote>
+            <blockquote id="famous-quote"></blockquote>
         </div>
         <nav id="nav">
             <ol>
@@ -49,9 +49,10 @@
                 </li>
                 <li class="top-menu dropdown">
                     <a href="#famous-hackers">Hackers Famosos</a>
-                    <button class="dropdown-toggle" aria-expanded="false" aria-label="Abrir submenú de Hackers Famosos">
-                        <span class="arrow" aria-hidden="true">▼</span>
-                    </button>
+                    <input type="checkbox" id="hackers-toggle">
+                    <label for="hackers-toggle">
+                        <span class="arrow">▼</span>
+                    </label>
                     <ul class="submenu">
                         <li><a href="#phineasfisher-hacker">Phineas Fisher</a></li>
                         <li><a href="#kevinmitnick-hacker">Kevin Mitnick</a></li>
@@ -60,9 +61,10 @@
                 </li>
                 <li class="top-menu dropdown">
                     <a href="#famous-cyberattacks">Ciberataques</a>
-                    <button class="dropdown-toggle" aria-expanded="false" aria-label="Abrir submenú de Ciberataques">
-                        <span class="arrow" aria-hidden="true">▼</span>
-                    </button>
+                    <input type="checkbox" id="cyberattacks-toggle">
+                    <label for="cyberattacks-toggle">
+                        <span class="arrow">▼</span>
+                    </label>
                     <ul class="submenu">
                         <li><a href="#stuxnet-cyberattack">Stuxnet</a></li>
                         <li><a href="#wannacry-cyberattack">WannaCry</a></li>
@@ -96,8 +98,8 @@
              <article id="cozybear-group">
                 <div>    
                     <h3>
-                        <span><span class="muted-color tab">02</span> Cozy Bear</span>
-                        <span class="apt">APT-29</span>
+                        <p><span class="muted-color tab">02</span> Cozy Bear</p>
+                        <p class="apt">APT-29</p>
                     </h3>
                     <img class="thumbnail-group" src="images/thumbnails/cozybear.webp" alt="Imagen representativa del grupo Cozy Bear">
                     <p class="about-group">El grupo Cozy Bear es un actor financiado y vinculado al <abbr title="Servicio de Inteligencia Exterior Ruso">SRV</abbr> o <abbr title="Servicio Federal de Seguridad de la Federación de Rusia">FSB</abbr>. Su objetivo principal es lograr una presencia persistente en sistemas de interés estratégico para obtener inteligencia valiosa para Rusia. Es conocido por comprometer la cadena de suministro de SolarWinds, lo que le permitió infiltrarse en sistemas gubernamentales y de empresas privadas principalmente de los Estados Unidos.</p>
@@ -111,8 +113,8 @@
             <article id="doubledragon-group">
                 <div>    
                     <h3>
-                        <span><span class="muted-color tab">03</span> Double Dragon</span>
-                        <span class="apt">APT-41</span>
+                        <p><span class="muted-color tab">03</span> Double Dragon</p>
+                        <p class="apt">APT-41</p>
                     </h3>
                     <img class="thumbnail-group" src="images/thumbnails/doubledragon.webp " alt="Imagen representativa del grupo Double Dragon">
                     <p class="about-group">El grupo Double Dragon es un actor con supuesto vínculo con el Ministerio de Seguridad del Estado de China. Tienen objetivos de espionaje y obtención de inteligencia que sea de interés estratégico para China, así como crimen financiero para obtener beneficios económicos.</p>
@@ -126,8 +128,8 @@
             <article id="equationgroup-group">
                 <div>    
                     <h3>
-                        <span><span class="muted-color tab">04</span> Equation Group</span>
-                        <span class="apt">APT-C-40</span>
+                        <p><span class="muted-color tab">04</span> Equation Group</p>
+                        <p class="apt">APT-C-40</p>
                     </h3>
                     <img class="thumbnail-group" src="images/thumbnails/equationgroup.webp" alt="Imagen representativa del grupo Equation Group">
                     <p class="about-group">El grupo Equation Group se diferencia por su capacidad de ciberespionaje altamente sofisticado vinculado con la <abbr title="Agencia de Seguridad Nacional de Estados Unidos">NSA</abbr>. Sus objetivos principales son el espionaje estratégico y la obtención de inteligencia de alto valor, incluyendo secretos militares, tecnológicos y gubernamentales. Se especializan en operaciones encubiertas de largo plazo mediante malware avanzado, exploits de día cero y técnicas de sigilo extremo, actuando sobre objetivos de alto interés global.</p>
@@ -141,8 +143,8 @@
             <article id="oilrig-group">
                 <div>    
                     <h3>
-                        <span><span class="muted-color tab">05</span> OilRig</span>
-                        <span class="apt">APT-34</span>
+                        <p><span class="muted-color tab">05</span> OilRig</p>
+                        <p class="apt">APT-34</p>
                     </h3>
                     <img class="thumbnail-group" src="images/thumbnails/oilrig.webp" alt="Imagen representativa del grupo OilRig">
                     <p class="about-group">OilRig es un grupo de ciberespionaje iraní enfocado en obtener información estratégica mediante ataques a sectores gubernamentales y energéticos del Medio Oriente, usando phishing y herramientas personalizadas para mantener el acceso a sus objetivos.</p>
@@ -156,10 +158,10 @@
             <article id="anonymous-group">
                 <div>    
                     <h3>
-                        <span><span class="muted-color tab">06</span> Anonymous</span>
+                        <p><span class="muted-color tab">06</span> Anonymous</p>
                     </h3>
                     <img class="thumbnail-group" src="images/thumbnails/anonymous.webp" alt="Imagen representativa del grupo Anonymous">
-                    <p class="about-group">El grupo Anonymous es un colectivo descentralizado, sin un cabecilla o líder, son conocidos por sus protestas e intrusiones contra gobiernos y corporaciones que consideran que incumplen los derechos humanos. Tienen como objetivo la lucha contra la censura y la libertad de información.</p>
+                    <p class="about-group">El grupo Anonymous es un colectivo descentralizado, sin un cabecilla o líder, son conocidos por sus protestas e intrusiones contra gobiernos y corporaciones que consideran que incumplen los derechos humanos. Tienen como objetivo la lucha contra la censura y la libertad de información.</i></p>
                 </div>
                 <div class="group-data">
                     <p>Región: Global</p>
@@ -170,7 +172,7 @@
             <article id="theshadowbrokers-group">
                 <div>    
                     <h3>
-                        <span><span class="muted-color tab">07</span> The Shadow Brokers</span>
+                        <p><span class="muted-color tab">07</span> The Shadow Brokers</p>
                     </h3>
                     <img class="thumbnail-group" src="images/thumbnails/theshadowbrokers.webp" alt="Imagen representativa del grupo The Shadow Brokers">
                     <p class="about-group">El grupo <abbr title="The Shadow Brokers">TSB</abbr> saltó al punto de mira internacional tras publicar varias filtraciones que contenían herramientas de piratería, incluidas vulnerabilidades de día 0 del grupo <a href="#equationgroup-group">Equation Group</a>, en el que se encontraba EternalBlue, el exploit que provocó <a href="#wannacry-cyberattack">WannaCry</a>, conocido como el mayor ataque de Ramsomware del mundo hasta la fecha.</p>
@@ -184,7 +186,7 @@
             <article id="shinyhunters-group">
                 <div>    
                     <h3>
-                        <span><span class="muted-color tab">08</span> ShinyHunters</span>
+                        <p><span class="muted-color tab">08</span><span class="tab"> ShinyHunters</span></p>
                     </h3>
                     <img class="thumbnail-group" src="images/thumbnails/shinyhunters.webp " alt="Imagen representativa del grupo ShinyHunters">
                     <p class="about-group">ShinyHunters es un grupo criminal dedicado al robo de datos de empresas, con el fin de extersionar a las compañías a cambio de criptomonedas. Se encuentra en el punto de mira de cuerpos de seguridad de todo el mundo por ser el administrador del que fue el mayor foro de la DarkWeb dedicado a la venta y filtración de datos, conocido como BreachForums.
@@ -199,7 +201,7 @@
             <article id="ransomhub-group">
                 <div>    
                     <h3>
-                        <span><span class="muted-color tab">09</span> RansomHub</span>
+                        <p><span class="muted-color tab">09</span><span class="tab"> RansomHub</span></p>
                     </h3>
                     <img class="thumbnail-group" src="images/thumbnails/ransomhub.webp" alt="Imagen representativa del grupo RansomHub">
                     <p class="about-group">RansomHub es un grupo de ransomware que opera bajo el modelo de <abbr title="Ransomware as a service">RAAS</abbr>, ofreciendo su infraestructura a afiliados que realizan ataques a organizaciones en todo el mundo. Este grupo se ha destacado por su agresiva estrategia de doble extorsión: exige el pago no solo para descifrar los datos, sino también para evitar su publicación. Ganó notoriedad por aprovechar el vacío dejado por otros grupos desmantelados, absorbiendo parte de sus antiguos afiliados y técnicas.</p>
@@ -213,7 +215,7 @@
         </section>
 
         <section id="famous-hackers" class="famous-hackers">
-            <h2><span aria-hidden="true">🔗</span> Los <span class="mark">hackers</span> más famosos</h2>
+            <h2>🔗 Los <span class="mark">hackers</span> más famosos</h2>
             <a class="link-to-post" href="blog/posts/hackers/phineas-fisher/el-hacker-phineas-fisher.html"
                 aria-label="Leer artículo sobre Phinas Fisher" aria-describedby="phineasfisher-desc">
             <article id="phineasfisher-hacker">
@@ -241,7 +243,7 @@
         </section>
 
         <section id="famous-cyberattacks" class="famous-cyberattacks">
-            <h2><span aria-hidden="true">🔗</span> Los <span class="mark">ciberataques</span> más grandes de la historia</h2>
+            <h2>🔗 Los <span class="mark">ciberataques</span> más grandes de la historia</h2>
             <article id="stuxnet-cyberattack">
                 <div>
                     <h3>Stuxnet</h3>
@@ -275,7 +277,7 @@
         </section>
 
         <section id="terms" class="terms">
-            <h2><span aria-hidden="true">🔗</span> <span class="mark">Términos</span></h2>
+            <h2>🔗 <span class="mark">Términos</span></h2>
         </section>
         <section>
             <p>Compartir en: </p>

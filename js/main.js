@@ -84,3 +84,32 @@ var lastTermClicked = undefined;
 addFamousQuote();
 addTerms();
 addTermEventListener();
+
+function initDropdowns() {
+  var buttons = document.querySelectorAll(".dropdown-toggle");
+
+  buttons.forEach(function(btn) {
+    var submenu = btn.nextElementSibling;
+    var links = submenu.querySelectorAll("a");
+
+    // Al inicio, el submenú está cerrado → links no tabulables
+    links.forEach(function(link) {
+      link.setAttribute("tabindex", "-1");
+    });
+
+    btn.addEventListener("click", function() {
+      var isOpen = btn.getAttribute("aria-expanded") === "true";
+
+      btn.setAttribute("aria-expanded", !isOpen);
+      btn.classList.toggle("open");
+      submenu.classList.toggle("open");
+
+      // Actualizar tabindex según el estado
+      links.forEach(function(link) {
+        link.setAttribute("tabindex", isOpen ? "-1" : "0");
+      });
+    });
+  });
+}
+
+initDropdowns();

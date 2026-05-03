@@ -136,15 +136,24 @@ a:hover {
 }
 
 /* Mostra submenú al hacer click */
-.dropdown input:checked ~ .submenu {
+.submenu.open {
   display: block;
   max-height: 200px;
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
 }
 
-/* Rotar flecha cuando está abierto */
-.dropdown input:checked + label .arrow {
+.dropdown-toggle {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.dropdown-toggle.open .arrow {
   transform: rotate(180deg);
 }
 
